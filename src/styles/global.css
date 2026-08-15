@@ -1591,8 +1591,9 @@ html.js body.loaded .hero__scroll-cue { opacity: 1; transform: none; }
   .nav__burger { display: flex; }
   .nav__cta { display: none; }
   .hero__layer--near { display: none; }
-  .hero__badge { top: 84px; bottom: auto; right: 20px; transform: rotate(0deg) scale(0.9); transform-origin: right top; }
-  .hero__content { padding-top: 90px; padding-bottom: 120px; }
+  .hero { align-items: flex-start; }
+  .hero__badge { top: 80px; bottom: auto; right: 18px; transform: rotate(0deg) scale(0.88); transform-origin: right top; z-index: 4; }
+  .hero__content { padding-top: 90px; padding-bottom: 140px; }
   .about { grid-template-columns: 1fr; }
   .about__img--main { width: min(70vw, 480px); margin: 0 auto 70px; }
   .about__img--float { right: 4vw; bottom: -10px; }
@@ -1613,17 +1614,17 @@ html.js body.loaded .hero__scroll-cue { opacity: 1; transform: none; }
 }
 
 @media (max-width: 620px) {
-  .hero { min-height: 100svh; }
+  .hero { min-height: 100svh; align-items: flex-start; }
   .hero__meta { grid-template-columns: repeat(2, 1fr); }
   .hero__meta-item:nth-child(2n) { border-right: 0; }
   .hero__meta-item:nth-child(3), .hero__meta-item:nth-child(4) { border-top: 1px solid rgba(244, 238, 225, .12); }
-  .hero__content { padding-top: 80px; padding-bottom: 125px; }
-  .hero__eyebrow { margin-bottom: 12px; }
-  .hero__title { font-size: clamp(2.3rem, 9.5vw, 3.4rem); margin-bottom: 16px; }
-  .hero__sub p { margin-bottom: 20px; }
-  .hero__badge { top: 76px; right: 14px; transform: scale(0.82); transform-origin: right top; }
+  .hero__content { padding-top: 85px; padding-bottom: 140px; }
+  .hero__eyebrow { margin-bottom: 10px; font-size: .72rem; }
+  .hero__title { font-size: clamp(2.1rem, 9vw, 3.2rem); margin-bottom: 14px; }
+  .hero__sub p { margin-bottom: 18px; font-size: .9rem; line-height: 1.5; }
+  .hero__ctas { gap: 14px; flex-direction: column; align-items: flex-start; }
+  .hero__badge { top: 76px; right: 14px; transform: scale(0.8); transform-origin: right top; z-index: 4; }
   .hero__scroll-cue { display: none; }
-  .hero__ctas { gap: 20px; }
   .about__list { grid-template-columns: 1fr; }
   .about__stats { grid-template-columns: repeat(2, 1fr); }
   .amenities__grid { grid-template-columns: 1fr; }
