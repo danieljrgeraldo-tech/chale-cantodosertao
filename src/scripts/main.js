@@ -195,7 +195,7 @@
       });
     }
 
-    if (expScroll && expTrack) {
+    if (expScroll && expTrack && win.innerWidth > 960) {
       var top = offsetTop(expScroll);
       var range = expScroll.offsetHeight - vh;
       var p = range > 0 ? clamp((y - top) / range, 0, 1) : 0;
@@ -203,6 +203,9 @@
       var maxX = Math.max(0, expTrack.scrollWidth - win.innerWidth);
       expTrack.style.transform = 'translate3d(' + (-p * maxX).toFixed(2) + 'px,0,0)';
       if (expProgress) expProgress.style.width = (p * 100).toFixed(2) + '%';
+    } else if (expPin && expTrack) {
+      expPin.style.transform = '';
+      expTrack.style.transform = '';
     }
 
     if (nav) {
@@ -554,7 +557,7 @@
     if (smooth.enabled) smooth.resize();
     revMeasure();
     revGo(revIndexPos);
-    if (expScroll && expTrack) {
+    if (expScroll && expTrack && win.innerWidth > 960) {
       var top = offsetTop(expScroll);
       var range = expScroll.offsetHeight - vh;
       var p = clamp((getY() - top) / (range || 1), 0, 1);
