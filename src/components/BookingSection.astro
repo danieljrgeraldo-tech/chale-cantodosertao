@@ -1,0 +1,50 @@
+---
+---
+<section class="booking" id="reserva">
+  <div class="booking__bg" data-parallax="0.08">
+    <img src="/images/chale-4.webp" alt="Chalé Canto do Sertão ao entardecer" loading="lazy">
+  </div>
+  <div class="booking__scrim"></div>
+
+  <div class="booking__inner">
+    <p class="eyebrow eyebrow--light reveal"><span>08</span> Reservas</p>
+    <h2 class="booking__title">
+      <span class="line"><span class="line-inner">O seu canto</span></span>
+      <span class="line"><span class="line-inner">espera <em>por vocês</em>.</span></span>
+    </h2>
+    <p class="booking__sub reveal">Escolha as datas, confira a disponibilidade e reserve direto no Booking.com — sem intermediários, sem complicação.</p>
+
+    <form class="booking__form reveal" id="bookingForm">
+      <div class="field">
+        <label for="checkin">Check-in</label>
+        <input type="date" id="checkin" name="checkin" required>
+      </div>
+      <div class="field">
+        <label for="checkout">Check-out</label>
+        <input type="date" id="checkout" name="checkout" required>
+      </div>
+      <div class="field">
+        <label for="guests">Hóspedes</label>
+        <div class="field__select">
+          <select id="guests" name="guests">
+            <option value="1">1 adulto</option>
+            <option value="2" selected>2 adultos</option>
+            <option value="3">3 adultos</option>
+          </select>
+          <span>▾</span>
+        </div>
+      </div>
+      <button type="submit" class="btn btn--clay" data-cursor="link" data-magnetic>
+        <span>Ver disponibilidade</span>
+        <span class="btn__arrow">→</span>
+      </button>
+    </form>
+
+    <ul class="booking__chips">
+      <li><span>✦</span>Check-in 13h — 23h</li>
+      <li><span>✦</span>Check-out 08h — 10h</li>
+      <li><span>✦</span>Máx. 3 hóspedes</li>
+      <li><span>✦</span>Animais permitidos</li>
+    </ul>
+  </div>
+</section>

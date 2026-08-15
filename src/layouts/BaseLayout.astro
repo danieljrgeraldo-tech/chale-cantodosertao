@@ -1,0 +1,78 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  canonicalURL?: string | URL;
+}
+
+const {
+  title = "Chalé Canto do Sertão — Refúgio para casais em Pescaria Brava · SC",
+  description = "Chalé Canto do Sertão: refúgio para casais no Sertão da Estiva, Pescaria Brava — SC. Banheira quente, vista para o jardim, kitchenette e a 7 km da Ponte de Laguna.",
+  image = "/images/chale-7.webp",
+  canonicalURL = new URL(Astro.url.pathname, Astro.site)
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{title}</title>
+  <script is:inline>document.documentElement.classList.add('js');</script>
+  <meta name="description" content={description}>
+  <link rel="canonical" href={canonicalURL}>
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content={title}>
+  <meta property="og:description" content="Banheira quente, vista para o jardim e a 7 km da Ponte de Laguna. O seu canto para silenciar a alma no sertão catarinense.">
+  <meta property="og:image" content={new URL(image, Astro.site)}>
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#20352a">
+  <script type="application/ld+json" is:inline>
+  {
+    "@context": "https://schema.org",
+    "@type": "LodgingBusiness",
+    "name": "Chalé Canto do Sertão",
+    "description": "Refúgio para casais no Sertão da Estiva, Pescaria Brava — SC. Banheira quente, kitchenette, varanda com vista para o jardim e a 7 km da Ponte de Laguna.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Estrada Geral Sertão da Estiva",
+      "addressLocality": "Pescaria Brava",
+      "addressRegion": "SC",
+      "addressCountry": "BR"
+    },
+    "geo": { "@type": "GeoCoordinates", "latitude": -28.389827, "longitude": -48.854397 },
+    "amenityFeature": [
+      { "@type": "LocationFeatureSpecification", "name": "Banheira quente" },
+      { "@type": "LocationFeatureSpecification", "name": "Wi-Fi" },
+      { "@type": "LocationFeatureSpecification", "name": "Kitchenette" },
+      { "@type": "LocationFeatureSpecification", "name": "Ar-condicionado" },
+      { "@type": "LocationFeatureSpecification", "name": "TV LCD" },
+      { "@type": "LocationFeatureSpecification", "name": "Varanda com vista para o jardim" },
+      { "@type": "LocationFeatureSpecification", "name": "Animais de estimação permitidos" },
+      { "@type": "LocationFeatureSpecification", "name": "Estacionamento gratuito" }
+    ],
+    "checkinTime": "13:00",
+    "checkoutTime": "10:00",
+    "petsAllowed": true,
+    "smokingAllowed": false,
+    "numberOfRooms": 1,
+    "maximumAttendeeCapacity": 3
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400;1,9..144,500&family=Outfit:wght@200;300;400;500;600&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="/images/chale-7.webp">
+  <link rel="preload" as="image" href="/images/chale-3.webp">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <slot />
+  <script src="../scripts/main.js"></script>
+</body>
+</html>
