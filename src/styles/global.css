@@ -1553,9 +1553,10 @@ html.js body.loaded .hero__scroll-cue { opacity: 1; transform: none; }
     justify-content: center;
     align-items: center;
     min-height: 100svh;
-    padding-top: 75px;
-    padding-bottom: 120px;
+    padding-top: 80px;
+    padding-bottom: 125px;
     box-sizing: border-box;
+    position: relative;
   }
   .hero__content {
     display: flex;
@@ -1568,16 +1569,18 @@ html.js body.loaded .hero__scroll-cue { opacity: 1; transform: none; }
     z-index: 2;
   }
   .hero__badge {
-    position: relative;
-    top: auto; right: auto; bottom: auto; left: auto;
-    transform: none;
-    margin-bottom: 16px;
-    width: fit-content;
-    text-align: left;
-    z-index: 2;
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    bottom: auto;
+    left: auto;
+    transform: rotate(0deg) scale(0.85);
+    transform-origin: right top;
+    margin: 0;
+    z-index: 4;
   }
   .hero__eyebrow { justify-content: center; text-align: center; margin-bottom: 12px; }
-  .hero__title { text-align: center; margin-bottom: 16px; font-size: clamp(2.2rem, 8vw, 3.4rem); }
+  .hero__title { text-align: center; margin-bottom: 16px; font-size: clamp(2.1rem, 7.8vw, 3.2rem); }
   .hero__sub { display: flex; flex-direction: column; align-items: center; text-align: center; }
   .hero__sub p { text-align: center; margin-bottom: 20px; }
   .hero__ctas { justify-content: center; }
@@ -1629,7 +1632,7 @@ html.js body.loaded .hero__scroll-cue { opacity: 1; transform: none; }
   .hero__meta-item:nth-child(2n) { border-right: 0; }
   .hero__meta-item:nth-child(3), .hero__meta-item:nth-child(4) { border-top: 1px solid rgba(244, 238, 225, .12); }
   .hero__content { padding: 0 16px; }
-  .hero__badge { margin-bottom: 12px; transform: scale(0.9); transform-origin: center center; }
+  .hero__badge { position: absolute; top: 76px; right: 14px; bottom: auto; left: auto; transform: scale(0.8); transform-origin: right top; margin: 0; z-index: 4; }
   .hero__eyebrow { margin-bottom: 10px; font-size: .72rem; }
   .hero__title { font-size: clamp(2rem, 8.5vw, 3rem); margin-bottom: 12px; }
   .hero__sub p { margin-bottom: 16px; font-size: .88rem; line-height: 1.5; }
