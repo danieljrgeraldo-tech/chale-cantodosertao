@@ -275,51 +275,7 @@ html.js [data-reveal].is-in { opacity: 1; transform: none; }
 }
 
 /* ---------- cursor ---------- */
-html.js .cursor { display: none; }
-@media (hover: hover) and (pointer: fine) {
-  html.js .cursor { display: block; }
-  html.js body, html.js a, html.js button, html.js select, html.js input { cursor: none; }
-  .cursor__dot, .cursor__ring {
-    position: fixed;
-    top: 0; left: 0;
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 4000;
-  }
-  .cursor__dot {
-    width: 8px; height: 8px;
-    background: var(--clay);
-    transform: translate(-50%, -50%);
-  }
-  .cursor__ring {
-    width: 44px; height: 44px;
-    border: 1px solid rgba(181, 83, 42, .7);
-    transform: translate(-50%, -50%);
-    transition: width .35s var(--ease-out), height .35s var(--ease-out), background .35s, border-color .35s;
-  }
-  .cursor.is-hover .cursor__ring {
-    width: 64px; height: 64px;
-    background: rgba(181, 83, 42, .12);
-  }
-  .cursor.is-gallery .cursor__ring {
-    width: 96px; height: 96px;
-    background: var(--clay);
-    border-color: var(--clay);
-    display: grid;
-    place-items: center;
-  }
-  .cursor.is-gallery .cursor__label {
-    display: block;
-    font-family: var(--font-body);
-    font-size: .68rem;
-    letter-spacing: .2em;
-    text-transform: uppercase;
-    color: var(--paper);
-    font-weight: 500;
-  }
-  .cursor__label { display: none; }
-  .cursor.is-down .cursor__ring { width: 28px; height: 28px; }
-}
+.cursor { display: none !important; }
 
 /* ---------- progress + grain ---------- */
 .progress {
